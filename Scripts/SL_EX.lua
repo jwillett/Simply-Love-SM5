@@ -1,5 +1,5 @@
 -- -----------------------------------------------------------------------
-UpdatePathMap = function(player, hash)
+UpdateExPathMap = function(player, hash)
 	local song = GAMESTATE:GetCurrentSong()
 	local song_dir = song:GetSongDir()
 	if song_dir ~= nil and #song_dir ~= 0 then

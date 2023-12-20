@@ -450,6 +450,8 @@ local af = Def.ActorFrame{
 				if IsItlSong(player) then
 					UpdatePathMap(player, SL[pn].Streams.Hash)
 				end
+
+				UpdateExPathMap(player, SL[pn].Streams.Hash)
 				
 				self:playcommand("MakeGrooveStatsRequest", {
 					endpoint="player-leaderboards.php?"..NETWORK:EncodeQueryParameters(query),

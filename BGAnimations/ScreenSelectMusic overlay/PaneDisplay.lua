@@ -335,6 +335,7 @@ af[#af+1] = RequestResponseActor(17, 50)..{
 				if IsItlSong(PlayerNumber[i]) then
 					UpdatePathMap(PlayerNumber[i], SL[pn].Streams.Hash)
 				end
+				UpdateExPathMap(PlayerNumber[i], SL[pn].Streams.Hash)
 				if SL[pn].ApiKey ~= "" and SL[pn].Streams.Hash ~= "" then
 					query["chartHashP"..i] = SL[pn].Streams.Hash
 					headers["x-api-key-player-"..i] = SL[pn].ApiKey
