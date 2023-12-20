@@ -172,6 +172,7 @@ LoadProfileCustom = function(profile, dir)
 		SL[pn]:initialize()
 		ParseGrooveStatsIni(player)
 		ReadItlFile(player)
+		ReadExFile(player)
 
 		SL[pn].Stages = stages
 	end
@@ -244,6 +245,7 @@ SaveProfileCustom = function(profile, dir)
 			-- Write to the ITL file if we need to.
 			-- This is relevant for memory cards.
 			WriteItlFile(player)
+			WriteExFile(player)
 			break
 		end
 	end

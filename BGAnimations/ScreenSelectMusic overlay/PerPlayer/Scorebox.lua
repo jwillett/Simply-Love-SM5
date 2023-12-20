@@ -160,6 +160,10 @@ local LeaderboardRequestProcessor = function(res, master)
 		if data[playerStr]["gsLeaderboard"] then
 			local entryCount = 0
 			for entry in ivalues(data[playerStr]["gsLeaderboard"]) do
+				if entry["isSelf"] and boogie_ex then
+					UpdateBoogieExScore(player, SL[pn].Streams.Hash, entry["score"])
+					SL["P"..n].exScore = entry["score"]
+				end
 				entryCount = entryCount + 1
 				SetScoreData(1, entryCount,
 								tostring(entry["rank"]),

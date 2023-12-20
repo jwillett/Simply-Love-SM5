@@ -135,6 +135,13 @@ for player in ivalues(PlayerNumber) do
 							self:visible(true)
 							return
 						end
+					elseif SL[pn].EXData["pathMap"][song_dir] ~= nil then
+						local hash = SL[pn].EXData["pathMap"][song_dir]
+						if SL[pn].EXData["hashMap"][hash] ~= nil then
+							self:settext(tostring(("%.1f"):format(SL[pn].EXData["hashMap"][hash]["ex"] / 100)))
+							self:visible(true)
+							return
+						end
 					end
 				end
 			end
